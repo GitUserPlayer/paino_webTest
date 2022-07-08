@@ -23,6 +23,7 @@
     </div>
     <div id="unity-fullscreen-button" style="display: none;"></div>
     <script>
+      var myGameInstance = null;
       const hideFullScreenButton = "0";
       const buildUrl = "Build";
       const loaderUrl = buildUrl + "/panionWeb_T.loader.js";
@@ -73,6 +74,7 @@
           progressBarEmpty.style.display = "";
           progressBarFull.style.width = `${100 * progress}%`;
         }).then((unityInstance) => {
+          myGameInstance = unityInstance;
           loadingCover.style.display = "none";
           if (canFullscreen) {
             if (!hideFullScreenButton) {

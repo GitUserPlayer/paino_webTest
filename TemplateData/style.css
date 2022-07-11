@@ -93,6 +93,20 @@ body {
   transform: translateZ(0);
   animation: spinner-spin 1.1s infinite linear;
 }
+
+.videoCanvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: black;
+}
+
+
 @keyframes spinner-spin {
   0% {
     transform: rotate(0deg);
